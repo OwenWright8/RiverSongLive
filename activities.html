@@ -1,33 +1,40 @@
 <style>
-    body, html {
+  body,
+  html {
     margin: 0;
     padding: 0;
-    font-family: 'Cabin', sans-serif; /* Apply the Cabin font */
-}
+    font-family: "Cabin", sans-serif; /* Apply the Cabin font */
+  }
 
-.page-title {
+  .page-title {
     text-align: center;
     font-size: 36px;
     margin: 20px;
     margin-bottom: -10px;
     color: #ffffff; /* Change the title color to white */
     z-index: 4;
-}
+  }
 
-.activities-container {
+  .activities-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 35px;
-}
+    overflow: auto;
+  }
 
-.activity {
+  .activity {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.9); /* Add some transparency to the activity background */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Add some transparency to the activity background */
 
     border-radius: 10px; /* Slightly rounded corners */
     padding: 20px;
@@ -35,126 +42,149 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 800px;
     width: 100%;
+  }
 
-}
-
-.activity-image {
+  .activity-image {
     max-width: 40%;
     height: auto;
     border-radius: 10px; /* Slightly rounded corners for the images */
     margin-right: 2%;
-}
+  }
 
-.activity-info {
+  .activity-info {
     line-height: 1.5; /* Spacing between lines */
     z-index: 3;
-}
+  }
 
-.activity-info h3 {
+  .activity-info h3 {
     margin: 0 0 10px;
     font-size: 24px;
     font-weight: bold;
-}
+  }
 
-.activity-info p {
+  .activity-info p {
     margin: 0;
     font-size: 18px;
     line-height: 1.5; /* Spacing between lines */
-}
+  }
 
-@media (max-width: 767.98px) { /* Responsive layout for smaller screens */
+  @media (max-width: 767.98px) {
+    /* Responsive layout for smaller screens */
     .activity {
-        flex-direction: column; /* Stack on mobile */
+      flex-direction: column; /* Stack on mobile */
     }
 
     .activity-image,
     .activity-info {
-        max-width: 100%;
-        width: 100%;
-        margin: 10px 0;
+      max-width: 100%;
+      width: 100%;
+      margin: 10px 0;
     }
-}
-
+  }
 </style>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Activities</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item" id="home">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item" id="about">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item" id="calendar">
-                    <a class="nav-link" href="calendar.html">Calendar</a>
-                </li>
-                <li class="nav-item" id="rates">
-                    <a class="nav-link" href="rates.html">Rates</a>
-                </li>
-                <li class="nav-item active" id="activities">
-                    <div class="nav-container">
-                        <a class="nav-link" href="activities.html">Activities</a>
-                        <div class="underline"></div>
-                    </div>
-                </li>   
-            </ul>
-        </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item" id="home">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item" id="about">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item" id="calendar">
+            <a class="nav-link" href="calendar.html">Calendar</a>
+          </li>
+          <li class="nav-item" id="rates">
+            <a class="nav-link" href="rates.html">Rates</a>
+          </li>
+          <li class="nav-item active" id="activities">
+            <div class="nav-container">
+              <a class="nav-link" href="activities.html">Activities</a>
+              <div class="underline"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
     <h1 class="page-title">Activities in Leavenworth, Indiana</h1>
     <div class="activities-container">
-        <!-- Activity 1 -->
-        <div class="activity">
-            <img src="cave.jpg" alt="Cave Exploring" class="activity-image">
-            <div class="activity-info">
-                <h3>Cave Exploring</h3>
-                <p>Discover the hidden wonders of Leavenworth's caves. Guided tours available.</p>
-            </div>
+      <!-- Activity 1 -->
+      <div class="activity">
+        <img src="cave.jpg" alt="Cave Exploring" class="activity-image" />
+        <div class="activity-info">
+          <h3>Cave Exploring</h3>
+          <p>
+            Discover the hidden wonders of Leavenworth's caves. Guided tours
+            available.
+          </p>
         </div>
-        <!-- Activity 2 -->
-        <div class="activity">
-            <img src="river.jpg" alt="River Kayaking" class="activity-image">
-            <div class="activity-info">
-                <h3>River Kayaking</h3>
-                <p>Experience the thrill of kayaking on the Ohio River. Rentals and lessons offered.</p>
-            </div>
+      </div>
+      <!-- Activity 2 -->
+      <div class="activity">
+        <img src="river.jpg" alt="River Kayaking" class="activity-image" />
+        <div class="activity-info">
+          <h3>River Kayaking</h3>
+          <p>
+            Experience the thrill of kayaking on the Ohio River. Rentals and
+            lessons offered.
+          </p>
         </div>
-        <!-- Activity 3 -->
-        <div class="activity">
-            <img src="hiking.jpg" alt="Hiking Trails" class="activity-image">
-            <div class="activity-info">
-                <h3>Hiking Trails</h3>
-                <p>Explore the scenic trails around Leavenworth, ranging from leisurely walks to challenging hikes.</p>
-            </div>
+      </div>
+      <!-- Activity 3 -->
+      <div class="activity">
+        <img src="hiking.jpg" alt="Hiking Trails" class="activity-image" />
+        <div class="activity-info">
+          <h3>Hiking Trails</h3>
+          <p>
+            Explore the scenic trails around Leavenworth, ranging from leisurely
+            walks to challenging hikes.
+          </p>
         </div>
-        <!-- Activity 4 -->
-        <div class="activity">
-            <img src="fishing.jpg" alt="Fishing Spots" class="activity-image">
-            <div class="activity-info">
-                <h3>Fishing Spots</h3>
-                <p>Find your perfect fishing spot along the Ohio River, with opportunities for anglers of all levels.</p>
-            </div>
+      </div>
+      <!-- Activity 4 -->
+      <div class="activity">
+        <img src="fishing.jpg" alt="Fishing Spots" class="activity-image" />
+        <div class="activity-info">
+          <h3>Fishing Spots</h3>
+          <p>
+            Find your perfect fishing spot along the Ohio River, with
+            opportunities for anglers of all levels.
+          </p>
         </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
