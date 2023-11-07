@@ -21,15 +21,26 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 10px; /* Add some padding */
+    }
+
+    iframe {
+      max-width: 100%; /* Ensures that iframe is not larger than the parent element */
     }
 
     p {
-      background: linear-gradient(
-        to bottom,
-        transparent 10%,
-        #242829 30%,
-        #242829
-      );
+      background-color: #222020;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px; /* Smaller text for smaller screens */
+      }
+      p {
+        padding: 15px; /* Add more padding to p on smaller screens */
+      }
     }
   </style>
   <body>
