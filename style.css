@@ -1,0 +1,191 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: 100% calc(100% + 100px);
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(36, 40, 41, 0.3);
+  z-index: 0;
+}
+
+.navbar {
+  background-color: transparent;
+  z-index: 2;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 30px;
+}
+
+.nav-item .underline {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s;
+}
+
+.nav-item.active .underline {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+.landing {
+  position: absolute;
+  top: 50%; /* Changed this from 50% to move it upwards */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.description {
+  font-size: 24px;
+  max-width: 80%;
+  margin-top: 210px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing .title {
+  font-size: 48px;
+}
+
+.landing .subtitle {
+  font-size: 18px;
+}
+
+.content {
+  min-height: 500vh; /* 5 screen lengths for a full transition */
+  background: linear-gradient(to bottom, transparent 10%, #242829 30%, #242829);
+  z-index: 0;
+  position: relative;
+}
+
+@media (max-width: 991.98px) {
+  /* Targeting screens smaller than Bootstrap's lg breakpoint */
+  .nav-item {
+    text-align: center; /* Center the text */
+  }
+
+  .nav-item .underline {
+    width: 100% !important; /* Set underline width */
+    left: 0 !important; /* Align the underline with the left edge of the text */
+    right: 0 !important; /* Align the underline with the right edge of the text */
+    margin-left: auto; /* Center the underline */
+    margin-right: auto; /* Center the underline */
+  }
+}
+
+.nav-container {
+  display: inline-block; /* Make the container fit the content */
+  position: relative; /* Establish a stacking context for the underline */
+}
+
+.underline {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%; /* Full width of the container */
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-item.active .underline {
+  width: 100%; /* Full width of the active item */
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1600px;
+}
+
+.showcase-title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.image {
+  max-width: 46%; /* Slightly reduce the maximum width */
+  width: 100%;
+  height: auto;
+  border: 3px solid #8b8b8b; /* Add a border */
+  margin: 0 4%; /* Add margin to the left and right */
+}
+
+.caption {
+  color: #ffffff;
+  text-align: center;
+  margin: 10px 4%;
+  max-width: 46%; /* Match the caption width to the image width */
+  width: 100%;
+}
+
+.right {
+  align-items: flex-end; /* Align to the right */
+}
+
+.left {
+  align-items: flex-start; /* Align to the left */
+}
+
+@media (max-width: 767.98px) {
+  /* Targeting screens smaller than Bootstrap's sm breakpoint */
+  .image,
+  .caption {
+    max-width: 90%;
+    margin: 0 5%;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(
+      36,
+      40,
+      41,
+      1
+    ); /* Add a background with some opacity */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  .right,
+  .left {
+    align-items: center; /* Center on mobile */
+  }
+}

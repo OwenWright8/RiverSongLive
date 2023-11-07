@@ -1,0 +1,150 @@
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif; /* Apply the Cabin font */
+    color: #ffffff;
+    min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds the viewport height */
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 10%;
+    margin-right: 17%;
+}
+
+@media (max-width: 767.98px) { /* Responsive layout for smaller screens */
+    .about-container {
+        display: flex;
+        flex-direction: column; /* Stack on mobile */
+        align-items: center;
+        justify-content: center; /* Center the content */
+        padding: 50px;
+        margin-top: 10%;
+        max-width: 1200px; /* Set a maximum width for better appearance on wide screens */
+        margin-left: auto; /* Center the container on the page */
+        margin-right: auto; /* Center the container on the page */
+    }
+
+    .image-container,
+    .info-container {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+
+.image-container {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-container {
+    width: 45%;
+    background-color: #222020;
+    padding: 20px;
+    border-radius: 10px; /* Slightly rounded corners */
+    z-index: 4;
+}
+
+.about-info {
+    line-height: 1.5; /* Spacing between lines */
+    z-index: 10;
+}
+
+@media (max-width: 767.98px) { /* Responsive layout for smaller screens */
+    .rates-container {
+        flex-direction: column; /* Stack on mobile */
+    }
+
+    .image-container,
+    .about-container {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item" id="home">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active" id="about">
+                    <div class="nav-container">
+                        <a class="nav-link" href="about.html">About</a>
+                        <div class="underline"></div>
+                    </div>
+                </li>   
+                <li class="nav-item" id="calendar">
+                    <a class="nav-link" href="calendar.html">Calendar</a>
+                </li>
+                <li class="nav-item" id="rates">
+                    <a class="nav-link" href="rates.html">Rates</a>
+                </li>
+                <li class="nav-item" id="activities">
+                        <a class="nav-link" href="activities.html">Activities</a>
+                </li>   
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="about-container">
+            <div class="image-container">
+                <img src="cabin.jpg" alt="Image1" class="image"> <!-- Add your image source here -->
+            </div>
+            <div class="info-container">
+                <p class="about-info">
+                    <center><h4>Riversong</h4></center>
+                    <center>
+                    Address: 208 S Riverview Ln<Br>
+                        Directions From Carefree, IN, I-64:<br>
+                        Turn left to stay on IN-66 W (towards Leavenworth, IN)<br>
+1.0 mi<br>
+Turn left onto IN-62 E/Ohio River Scenic Byway<br>
+0.8 mi<br>
+Turn right onto River View Ln<br>
+171 ft<br>
+Turn right (keep bearing to the far right)<br>
+ Destination will be 2nd house on the left<br>
+                </center>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
