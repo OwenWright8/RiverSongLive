@@ -17,6 +17,7 @@
   </head>
   <style>
     .landing {
+      -webkit-tap-highlight-color: transparent;
       pointer-events: none;
       cursor: default;
       -webkit-touch-callout: none;
@@ -28,12 +29,8 @@
     }
 
     .landing {
-      position: relative;
-      top: 40%; /* Changed this from 50% to move it upwards */
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin-top: 10%;
       text-align: center;
-      z-index: 1;
       width: 100%;
     }
 
@@ -61,15 +58,14 @@
         #242829 30%,
         #242829
       );
-      z-index: 0;
-      position: relative;
+      z-index: 5;
     }
 
     .image-gallery {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 1600px;
+      padding-top: 1400px;
     }
 
     .showcase-title {
@@ -92,6 +88,7 @@
       height: auto;
       border: 3px solid #8b8b8b; /* Add a border */
       margin: 0 4%; /* Add margin to the left and right */
+      z-index: 6;
     }
 
     .caption {
@@ -224,7 +221,7 @@
           <p class="caption">Roomy Bathroom with Shower.</p>
         </div>
         <div class="image-container right">
-          <img src="image6.jpg" alt="Image 6" class="image" />
+          <img src="Deck_View.jpg" alt="Image 5" class="image" />
           <p class="caption">
             Riverview outside deck with large windows spanning the width of the
             cabin with beautiful views from many different angles within the
@@ -232,10 +229,18 @@
           </p>
         </div>
         <div class="image-container left">
+          <img src="image6.jpg" alt="Image 6" class="image" />
+          <p class="caption">
+            Riverview outside deck with large windows spanning the width of the
+            cabin with beautiful views from many different angles within the
+            cabin. Also includes a hot tub on the lower patio and firepit area.
+          </p>
+        </div>
+        <div class="image-container right">
           <img src="hottub.jpg" alt="hottub" class="image" />
           <p class="caption">Riverview hot tub.</p>
         </div>
-        <div class="image-container right">
+        <div class="image-container left">
           <img src="lights.jpg" alt="lights" class="image" />
           <p class="caption">Solar lights leading to hot tub.</p>
         </div>
