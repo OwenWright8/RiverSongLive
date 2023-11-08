@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: rgba(
       255,
       255,
@@ -40,7 +40,7 @@
     margin: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 800px;
-    width: 100%;
+    width: 80%;
   }
 
   .activity-image {
@@ -59,18 +59,22 @@
     margin: 0 0 10px;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
   }
 
   .activity-info p {
     margin: 0;
     font-size: 18px;
     line-height: 1.5; /* Spacing between lines */
+    text-align: center;
   }
 
   @media (max-width: 767.98px) {
     /* Responsive layout for smaller screens */
     .activity {
       flex-direction: column; /* Stack on mobile */
+      margin-left: 10px;
+      margin-right: 10px;
     }
 
     .activity-image,
@@ -138,7 +142,6 @@
     <div class="activities-container">
       <!-- Activity 1 -->
       <div class="activity">
-        <img src="cave.jpg" alt="Cave Exploring" class="activity-image" />
         <div class="activity-info">
           <h3>Cave Exploring</h3>
           <p>
@@ -149,7 +152,6 @@
       </div>
       <!-- Activity 2 -->
       <div class="activity">
-        <img src="river.jpg" alt="River Kayaking" class="activity-image" />
         <div class="activity-info">
           <h3>River Kayaking</h3>
           <p>
@@ -160,7 +162,6 @@
       </div>
       <!-- Activity 3 -->
       <div class="activity">
-        <img src="hiking.jpg" alt="Hiking Trails" class="activity-image" />
         <div class="activity-info">
           <h3>Hiking Trails</h3>
           <p>
@@ -171,7 +172,6 @@
       </div>
       <!-- Activity 4 -->
       <div class="activity">
-        <img src="fishing.jpg" alt="Fishing Spots" class="activity-image" />
         <div class="activity-info">
           <h3>Fishing Spots</h3>
           <p>
