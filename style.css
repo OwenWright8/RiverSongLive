@@ -61,9 +61,9 @@ body::before {
   }
 
   .nav-item .underline {
-    width: 100% !important; /* Set underline width */
-    left: 0 !important; /* Align the underline with the left edge of the text */
-    right: 0 !important; /* Align the underline with the right edge of the text */
+    width: 100%; /* Set underline width */
+    left: 0; /* Align the underline with the left edge of the text */
+    right: 0; /* Align the underline with the right edge of the text */
     margin-left: auto; /* Center the underline */
     margin-right: auto; /* Center the underline */
   }
@@ -78,7 +78,7 @@ body::before {
   content: "";
   display: block;
   height: 2px;
-  width: 100%; /* Full width of the container */
+  width: 100%;
   background-color: #ffffff;
   position: absolute;
   bottom: 0;
