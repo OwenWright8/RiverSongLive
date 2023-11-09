@@ -1,11 +1,10 @@
 <style>
   body,
   html {
-    margin: 0;
     padding: 0;
     color: #ffffff;
-    min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds the viewport height */
+    min-height: 100vh;
+    overflow-y: auto;
   }
 
   .mood-container {
@@ -15,13 +14,11 @@
     align-content: center;
     justify-content: space-between;
     padding: 50px;
-    margin-top: 10%;
   }
 
   @media (max-width: 767.98px) {
     .image-container {
       width: 90%;
-      margin: 10px 0;
     }
   }
 
@@ -34,14 +31,13 @@
   }
 
   .image-container img {
-    margin: 20px;
+    margin-bottom: 20px;
     border: 3px solid #8b8b8b;
   }
 
   @media (max-width: 767.98px) {
     .image-container {
       width: 90%;
-      margin: 10px 0;
     }
     .underline {
       width: 18% !important;
@@ -105,7 +101,9 @@
         </ul>
       </div>
     </nav>
+
     <div class="mood-container">
+      <h1>Moods of the Ohio River</h1>
       <div class="image-container">
         <img
           src="Images/Moods/Clouds_of_Blue.jpg"
