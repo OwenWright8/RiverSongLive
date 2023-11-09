@@ -3,10 +3,9 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Lora", serif;
-  background: url("background.jpg") no-repeat center center fixed;
+  background: url("background.jpg") no-repeat center center;
   background-size: 100% calc(100% + 100px);
   color: #ffffff;
-  overflow-x: hidden;
   overflow: auto;
   position: relative;
   height: 100%;
@@ -14,7 +13,6 @@ html {
 
 body::before {
   content: "";
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -39,7 +37,6 @@ body::before {
   height: 2px;
   width: 0;
   background-color: #ffffff;
-  position: absolute;
   bottom: 0;
   left: 50%;
   transition: all 0.3s;
@@ -61,11 +58,27 @@ body::before {
   }
 
   .nav-item .underline {
+    margin-top: -4;
     width: 100%; /* Set underline width */
     left: 0; /* Align the underline with the left edge of the text */
     right: 0; /* Align the underline with the right edge of the text */
     margin-left: auto; /* Center the underline */
     margin-right: auto; /* Center the underline */
+    margin-bottom: 4px;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(
+      36,
+      40,
+      41,
+      1
+    ); /* Add a background with some opacity */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  .navbar-toggler {
+    background-color: rgba(36, 40, 41, 1);
   }
 }
 
@@ -80,7 +93,6 @@ body::before {
   height: 2px;
   width: 100%;
   background-color: #ffffff;
-  position: absolute;
   bottom: 0;
   left: 0;
 }
