@@ -8,9 +8,9 @@
     overflow-y: auto; /* Enable vertical scrolling if content exceeds the viewport height */
   }
 
-  .about-container {
+  .mood-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: space-between;
@@ -19,21 +19,7 @@
   }
 
   @media (max-width: 767.98px) {
-    /* Responsive layout for smaller screens */
-    .about-container {
-      display: flex;
-      flex-direction: column; /* Stack on mobile */
-      align-items: center;
-      justify-content: center; /* Center the content */
-      padding: 50px;
-      margin-top: 10%;
-      max-width: 1200px; /* Set a maximum width for better appearance on wide screens */
-      margin-left: auto; /* Center the container on the page */
-      margin-right: auto; /* Center the container on the page */
-    }
-
-    .image-container,
-    .info-container {
+    .image-container {
       width: 90%;
       margin: 10px 0;
     }
@@ -42,37 +28,18 @@
   .image-container {
     width: 45%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     z-index: 4;
   }
 
-  .image {
-    max-width: 100%;
-    height: auto;
-    border: 3px solid #8b8b8b; /* Add a border */
-  }
-
-  .info-container {
-    width: 45%;
-    background-color: #222020;
-    padding: 20px;
-    border-radius: 10px; /* Slightly rounded corners */
-    z-index: 4;
-  }
-
-  .about-info {
-    line-height: 1.5; /* Spacing between lines */
-    z-index: 10;
+  .image-container img {
+    margin: 20px;
+    border: 3px solid #8b8b8b;
   }
 
   @media (max-width: 767.98px) {
-    /* Responsive layout for smaller screens */
-    .about-container {
-      flex-direction: column; /* Stack on mobile */
-    }
-
-    .image-container,
-    .info-container {
+    .image-container {
       width: 90%;
       margin: 10px 0;
     }
@@ -84,7 +51,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riversong | About</title>
+    <title>Riversong | Moods</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
@@ -114,10 +81,9 @@
           <li class="nav-item" id="home">
             <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item active" id="about">
+          <li class="nav-item" id="about">
             <div class="nav-container">
               <a class="nav-link" href="about.html">About</a>
-              <div class="underline"></div>
             </div>
           </li>
           <li class="nav-item" id="calendar">
@@ -129,33 +95,35 @@
           <li class="nav-item" id="activities">
             <a class="nav-link" href="activities.html">Activities</a>
           </li>
-          <li class="nav-item" id="moods">
+          <li class="nav-item active" id="moods">
             <a class="nav-link" href="moods.html">Moods</a>
+            <div class="underline"></div>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="about-container">
+    <div class="mood-container">
       <div class="image-container">
-        <img src="images/About/cabin.jpg" alt="Image1" class="image" />
-        <!-- Add your image source here -->
-      </div>
-      <div class="info-container">
-        <p class="about-info">
-          <center><h4>Riversong</h4></center>
-          <center>
-            Address: 208 S Riverview Ln<br />
-            Directions From Carefree, IN, I-64:<br />
-            Turn left to stay on IN-66 W (towards Leavenworth, IN)<br />
-            1.0 mi<br />
-            Turn left onto IN-62 E/Ohio River Scenic Byway<br />
-            0.8 mi<br />
-            Turn right onto River View Ln<br />
-            171 ft<br />
-            Turn right (keep bearing to the far right)<br />
-            Destination will be 2nd house on the left<br />
-          </center>
-        </p>
+        <img
+          src="Images/Moods/Clouds_of_Blue.jpg"
+          alt="Clouds_of_Blue"
+          class="image"
+        />
+        <img
+          src="Images/Moods/Clouds_of_Orange_Yellow.jpg"
+          alt="Clouds_of_Orange_Yellow"
+          class="image"
+        />
+        <img
+          src="Images/Moods/Purple_Sunset.jpg"
+          alt="Purple_Sunset"
+          class="image"
+        />
+        <img
+          src="Images/Moods/Yellow_Gold_.jpg"
+          alt="Yellow_Gold"
+          class="image"
+        />
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
