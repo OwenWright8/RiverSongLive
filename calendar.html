@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riversong | Calendar</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -21,26 +21,56 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 10px; /* Add some padding */
+      padding: 40px 10px;
+      position: relative;
+      z-index: 10;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content-cal h1 {
+      font-size: 48px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      margin: 40px 20px 50px;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
     }
 
     iframe {
-      max-width: 100%; /* Ensures that iframe is not larger than the parent element */
+      max-width: 100%;
       z-index: 5;
+      border-radius: 12px !important;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      margin-bottom: 30px;
     }
 
     p {
-      background-color: #222020;
-      padding: 20px;
-      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(34, 32, 32, 0.95), rgba(42, 40, 40, 0.95));
+      padding: 30px 40px;
+      border-radius: 12px;
+      max-width: 800px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 24px; /* Smaller text for smaller screens */
+      .content-cal h1 {
+        font-size: 36px;
+        margin: 30px 20px 40px;
       }
       p {
-        padding: 15px; /* Add more padding to p on smaller screens */
+        padding: 20px;
+        font-size: 16px;
       }
     }
   </style>

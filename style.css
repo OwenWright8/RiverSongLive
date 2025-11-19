@@ -9,21 +9,32 @@ html {
   overflow: auto;
   position: relative;
   height: 100%;
+  background-attachment: fixed;
 }
 
 body::before {
   content: "";
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(36, 40, 41, 0.3);
   z-index: 0;
+  pointer-events: none;
 }
 
 .navbar {
   background-color: transparent;
-  z-index: 2;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(36, 40, 41, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-item {
@@ -39,16 +50,27 @@ body::before {
   background-color: #ffffff;
   bottom: 0;
   left: 50%;
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item.active .underline {
   width: 100%;
   left: 0;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 .nav-link {
   color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 991.98px) {

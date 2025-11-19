@@ -7,9 +7,21 @@
 
   .page-title {
     text-align: center;
-    font-size: 36px;
-    margin: 20px;
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin: 60px 20px 40px;
     color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    z-index: 10;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .activities-container {
@@ -18,7 +30,9 @@
     align-items: center;
     justify-content: space-between;
     font-family: "Lora", serif;
-    padding: 0px;
+    padding: 20px 0 80px;
+    position: relative;
+    z-index: 10;
   }
 
   .activity {
@@ -26,13 +40,36 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #222020;
+    background: linear-gradient(135deg, rgba(34, 32, 32, 0.95), rgba(42, 40, 40, 0.95));
     color: #ffffff;
-    border-radius: 10px; /* Slightly rounded corners */
-    padding: 20px;
-    margin: 20px;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 25px;
     max-width: 800px;
     width: 80%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .activity:nth-child(1) { animation-delay: 0.1s; }
+  .activity:nth-child(2) { animation-delay: 0.2s; }
+  .activity:nth-child(3) { animation-delay: 0.3s; }
+  .activity:nth-child(4) { animation-delay: 0.4s; }
+
+  .activity:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.6);
   }
 
   .activity-image {
@@ -48,18 +85,21 @@
   }
 
   .activity-info h3 {
-    margin: 0 0 10px;
-    font-size: 24px;
+    margin: 0 0 15px;
+    font-size: 28px;
     text-align: center;
-    font-family: "Lora", serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #ffffff;
   }
 
   .activity-info p {
     margin: 0;
-    font-size: 18px;
-    line-height: 1.5; /* Spacing between lines */
+    font-size: 17px;
+    line-height: 1.7;
     text-align: center;
     font-family: "Lora", serif;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   @media (max-width: 767.98px) {
@@ -86,7 +126,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riversong | Activities</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link
