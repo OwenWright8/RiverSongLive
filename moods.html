@@ -1,178 +1,96 @@
-<style>
-  body,
-  html {
-    padding: 0;
-    color: #ffffff;
-    min-height: 100vh;
-    overflow-y: auto;
-  }
-
-  .mood-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    padding: 50px;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-  }
-
-  .mood-container h1 {
-    font-size: 48px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    margin: 40px 20px 60px;
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 1px;
-    animation: fadeIn 1s ease-out;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (max-width: 767.98px) {
-    .image-container {
-      width: 90%;
-    }
-  }
-
-  .image-container {
-    width: 55%;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 4;
-    gap: 40px;
-  }
-
-  .image-container img {
-    border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-    transition: all 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideUp 0.8s ease-out forwards;
-  }
-
-  @keyframes slideUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .image-container img:nth-child(1) { animation-delay: 0.1s; }
-  .image-container img:nth-child(2) { animation-delay: 0.2s; }
-  .image-container img:nth-child(3) { animation-delay: 0.3s; }
-  .image-container img:nth-child(4) { animation-delay: 0.4s; }
-
-  .image-container img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6);
-  }
-
-  @media (max-width: 767.98px) {
-    .image-container {
-      width: 90%;
-    }
-    .underline {
-      width: 18% !important;
-    }
-  }
-</style>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riversong | Moods</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item" id="home">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item" id="about">
-            <div class="nav-container">
-              <a class="nav-link" href="about.html">About</a>
-            </div>
-          </li>
-          <li class="nav-item" id="calendar">
-            <a class="nav-link" href="calendar.html">Calendar</a>
-          </li>
-          <li class="nav-item" id="rates">
-            <a class="nav-link" href="rates.html">Rates</a>
-          </li>
-          <li class="nav-item" id="activities">
-            <a class="nav-link" href="activities.html">Activities</a>
-          </li>
-          <li class="nav-item active" id="moods">
-            <a class="nav-link" href="moods.html">Moods</a>
-            <div class="underline"></div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="mood-container">
-      <h1>Moods of the Ohio River</h1>
-      <div class="image-container">
-        <img
-          src="Images/Moods/Clouds_of_Blue.jpg"
-          alt="Clouds_of_Blue"
-          class="image"
-        />
-        <img
-          src="Images/Moods/Clouds_of_Orange_Yellow.jpg"
-          alt="Clouds_of_Orange_Yellow"
-          class="image"
-        />
-        <img
-          src="Images/Moods/paddle_boat.jpg"
-          alt="Paddle_Boat"
-          class="image"
-        />
-        <img
-          src="Images/Moods/Yellow_Gold_.jpg"
-          alt="Yellow_Gold"
-          class="image"
-        />
-      </div>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moods of the Ohio River | Riversong Cabin</title>
+  <meta name="description" content="Sunsets, storm clouds and paddle boats: photos of the Ohio River taken from Riversong Cabin in Leavenworth, Indiana.">
+  <link rel="canonical" href="https://cabinriversong.com/moods.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riversong Cabin">
+  <meta property="og:title" content="Moods of the Ohio River | Riversong Cabin">
+  <meta property="og:description" content="Sunsets, storm clouds and paddle boats: photos of the Ohio River taken from Riversong Cabin in Leavenworth, Indiana.">
+  <meta property="og:url" content="https://cabinriversong.com/moods.html">
+  <meta property="og:image" content="https://cabinriversong.com/assets/img/river-sunset.webp">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1f3d38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1">
+  <script src="js/site.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header over-hero" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Riversong Cabin home"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f3d38"/><g fill="none" stroke="#f6f2ea" stroke-linecap="round" stroke-linejoin="round"><path d="M9 37 L32 10 L55 37" stroke-width="4.2"/><path d="M15 37 H49 M32 11 V37 M32 37 L22.5 25 M32 37 L41.5 25" stroke-width="2.8"/></g><path d="M9 47 q5.75 -4.5 11.5 0 t11.5 0 t11.5 0 t11.5 0" fill="none" stroke="#e39a5c" stroke-width="3.4" stroke-linecap="round"/><path d="M15 55 q4.25 -3.4 8.5 0 t8.5 0 t8.5 0 t8.5 0" fill="none" stroke="#e39a5c" stroke-width="2.6" stroke-linecap="round" opacity=".7"/></svg><span class="brand-text"><span class="brand-name">Riversong</span><span class="brand-sub"><span class="hide-sm">Timber-frame cabin · </span>Leavenworth, IN</span></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav class="nav" id="site-nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="rates.html">Rates</a><a href="calendar.html">Calendar</a><a href="activities.html">Activities</a><a href="moods.html" aria-current="page">Moods</a><a class="btn btn-primary" href="tel:+15023144007">Call Darlene</a></nav>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <img src="assets/img/clouds-of-blue.webp" alt="Purple clouds over the Ohio River" style="object-position:center" fetchpriority="high">
+      <div class="container">
+        <span class="eyebrow">From the deck</span>
+        <h1>Moods of the Ohio River</h1>
+        <p>The same view, never the same twice. A few of the skies we've seen from Riversong.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="gallery moods" data-gallery>
+          <button type="button" class="wide" data-lightbox="assets/img/clouds-of-blue.webp" data-caption="Clouds of blue" aria-label="View larger: Purple and blue clouds over the river at dusk"><img src="assets/img/clouds-of-blue-sm.webp" alt="Purple and blue clouds over the river at dusk" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/clouds-orange.webp" data-caption="Clouds of orange and yellow" aria-label="View larger: Orange and yellow clouds over the river"><img src="assets/img/clouds-orange-sm.webp" alt="Orange and yellow clouds over the river" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/paddle-boat.webp" data-caption="A paddle boat passing at night" aria-label="View larger: A lit-up paddle boat on the river at night"><img src="assets/img/paddle-boat-sm.webp" alt="A lit-up paddle boat on the river at night" loading="lazy"></button>
+          <button type="button" class="wide" data-lightbox="assets/img/river-sunset.webp" data-caption="Yellow gold" aria-label="View larger: Yellow and gold sunset clouds over the river"><img src="assets/img/river-sunset-sm.webp" alt="Yellow and gold sunset clouds over the river" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/sunset-sun.webp" data-caption="Sundown over the bend" aria-label="View larger: The sun setting over the river bend"><img src="assets/img/sunset-sun-sm.webp" alt="The sun setting over the river bend" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/sunset-violet.webp" data-caption="Violet evening" aria-label="View larger: Violet sunset over the river"><img src="assets/img/sunset-violet-sm.webp" alt="Violet sunset over the river" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Reservations</span>
+          <h2>Ready for a few nights on the river?</h2>
+          <p class="lead">Riversong is booked directly with the owner, Darlene Vasser. Check the <a href="calendar.html" style="color:#fff">calendar</a> for open dates, then call or email to reserve.</p>
+          <div class="btn-row" style="margin-top:1.5rem">
+            <a class="btn btn-primary" href="tel:+15023144007"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Call Darlene (502) 314-4007</a>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <ul class="contact-lines">
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+15023144007">(502) 314-4007</a><small>Call or text Darlene</small></div></li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><div><a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a><small>Email for dates and questions</small></div></li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><a href="about.html#directions">Leavenworth, Indiana</a><small>On the Ohio River, off I-64 exit 92</small></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f3d38"/><g fill="none" stroke="#f6f2ea" stroke-linecap="round" stroke-linejoin="round"><path d="M9 37 L32 10 L55 37" stroke-width="4.2"/><path d="M15 37 H49 M32 11 V37 M32 37 L22.5 25 M32 37 L41.5 25" stroke-width="2.8"/></g><path d="M9 47 q5.75 -4.5 11.5 0 t11.5 0 t11.5 0 t11.5 0" fill="none" stroke="#e39a5c" stroke-width="3.4" stroke-linecap="round"/><path d="M15 55 q4.25 -3.4 8.5 0 t8.5 0 t8.5 0 t8.5 0" fill="none" stroke="#e39a5c" stroke-width="2.6" stroke-linecap="round" opacity=".7"/></svg><span class="brand-text"><span class="brand-name">Riversong</span><span class="brand-sub">On the Ohio River</span></span></a>
+          <p>A timber-frame cabin in Leavenworth, Indiana, looking across the Ohio River to the Kentucky hills.</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="rates.html">Rates</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="activities.html">Activities</a></li><li><a href="moods.html">Moods</a></li></ul></div>
+        <div><h4>Reservations</h4><ul>
+          <li>Darlene Vasser, owner</li>
+          <li><a href="tel:+15023144007">(502) 314-4007</a></li>
+          <li><a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span data-year>2026</span> Riversong Cabin</span><span>No pets · No smoking inside · No parties or events</span></div>
+    </div>
+  </footer>
+</body>
 </html>

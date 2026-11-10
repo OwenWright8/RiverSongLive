@@ -1,296 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RiverSong | Home</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <style>
-    .landing {
-      margin-top: 10%;
-      text-align: center;
-      animation: fadeInUp 1.2s ease-out;
-      position: relative;
-      z-index: 10;
-    }
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riversong Cabin | Timber-frame cabin on the Ohio River in Leavenworth, IN</title>
+  <meta name="description" content="Riversong is a timber-frame cabin in Leavenworth, Indiana, overlooking the Ohio River. Sleeps 4, hot tub, fire pit, river-view deck. From $215/night. Call Darlene at (502) 314-4007.">
+  <link rel="canonical" href="https://cabinriversong.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riversong Cabin">
+  <meta property="og:title" content="Riversong Cabin | Timber-frame cabin on the Ohio River in Leavenworth, IN">
+  <meta property="og:description" content="Riversong is a timber-frame cabin in Leavenworth, Indiana, overlooking the Ohio River. Sleeps 4, hot tub, fire pit, river-view deck. From $215/night. Call Darlene at (502) 314-4007.">
+  <meta property="og:url" content="https://cabinriversong.com/">
+  <meta property="og:image" content="https://cabinriversong.com/assets/img/river-sunset.webp">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1f3d38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1">
+  <script src="js/site.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header over-hero" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Riversong Cabin home"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f3d38"/><g fill="none" stroke="#f6f2ea" stroke-linecap="round" stroke-linejoin="round"><path d="M9 37 L32 10 L55 37" stroke-width="4.2"/><path d="M15 37 H49 M32 11 V37 M32 37 L22.5 25 M32 37 L41.5 25" stroke-width="2.8"/></g><path d="M9 47 q5.75 -4.5 11.5 0 t11.5 0 t11.5 0 t11.5 0" fill="none" stroke="#e39a5c" stroke-width="3.4" stroke-linecap="round"/><path d="M15 55 q4.25 -3.4 8.5 0 t8.5 0 t8.5 0 t8.5 0" fill="none" stroke="#e39a5c" stroke-width="2.6" stroke-linecap="round" opacity=".7"/></svg><span class="brand-text"><span class="brand-name">Riversong</span><span class="brand-sub"><span class="hide-sm">Timber-frame cabin · </span>Leavenworth, IN</span></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav class="nav" id="site-nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="rates.html">Rates</a><a href="calendar.html">Calendar</a><a href="activities.html">Activities</a><a href="moods.html">Moods</a><a class="btn btn-primary" href="tel:+15023144007">Call Darlene</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <img class="hero-media" src="assets/img/river-sunset.webp" alt="Sunset clouds reflected in the Ohio River below the cabin" fetchpriority="high">
+      <div class="container hero-content">
+        <span class="eyebrow">Leavenworth, Indiana · On the Ohio River</span>
+        <h1>Riversong, a timber-frame cabin above the river</h1>
+        <p>Welcome to the Riversong Timber Frame Cabin, nestled in the quaint town of Leavenworth, Indiana. This retreat overlooks the Ohio River from the Indiana banks, facing the Kentucky landscape.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="tel:+15023144007"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Call Darlene</a>
+          <a class="btn btn-ghost" href="calendar.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Check availability</a>
+        </div>
+      </div>
+    </section>
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Welcome</span>
+          <h2>Big windows, warm timber and the river at your feet</h2>
+          <p class="lead">Riversong is a cozy timber-frame cabin built for two to four guests. Cook in a full kitchen, soak in the hot tub on the lower patio, gather around the fire pit, and watch the paddle wheelers and barges drift by below.</p>
+          <div class="facts">
+            <div class="fact"><strong>4</strong><span>Guests</span></div>
+            <div class="fact"><strong>1</strong><span>Queen bedroom + sleeper</span></div>
+            <div class="fact"><strong>$215</strong><span>Per night + taxes</span></div>
+            <div class="fact"><strong>2</strong><span>Night minimum</span></div>
+          </div>
+          <div class="btn-row"><a class="btn btn-dark" href="rates.html">Rates &amp; policies</a><a class="btn btn-ghost" style="color:var(--forest)" href="about.html#directions">Directions</a></div>
+        </div>
+        <div class="split-media reveal"><img src="assets/img/deck-view-sm.webp" alt="Covered deck with chairs looking up the Ohio River" loading="lazy"></div>
+      </div>
+    </section>
 
-    .description {
-      font-size: 20px;
-      line-height: 1.8;
-      max-width: 70%;
-      margin-top: 180px;
-      margin-left: auto;
-      margin-right: auto;
-      color: rgba(255, 255, 255, 0.95);
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-      animation: fadeInUp 1.2s ease-out 0.3s backwards;
-    }
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Inside the cabin</span><h2>Everything you need, nothing you don't</h2></div>
+          <a class="btn btn-ghost" style="color:var(--forest)" href="#gallery">See all photos</a>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-media"><img src="assets/img/great-room-sm.webp" alt="The main room with a leather sofa, timber beams and a sliding barn door" loading="lazy"></div>
+            <div class="card-body"><h3>The great room</h3><p>Exposed timber framing, a leather sofa that opens into a queen sleeper, and windows toward the river.</p><div class="chips"><span class="chip">Queen sleeper sofa</span><span class="chip">River views</span></div></div>
+          </article>
+          <article class="card reveal">
+            <div class="card-media"><img src="assets/img/kitchen-sm.webp" alt="Kitchen with dark cabinets, a stainless stove and a window over the sink" loading="lazy"></div>
+            <div class="card-body"><h3>Full kitchen</h3><p>A large island seats 4. Full-size fridge, dishwasher, stove, microwave, Keurig and toaster.</p><div class="chips"><span class="chip">Island for 4</span><span class="chip">Cookware & dishes</span></div></div>
+          </article>
+          <article class="card reveal">
+            <div class="card-media"><img src="assets/img/bedroom-sm.webp" alt="Queen bed under timber beams with a window looking out at the river" loading="lazy"></div>
+            <div class="card-body"><h3>Queen bedroom</h3><p>A quiet queen bedroom with river light in the morning. The sleeper sofa adds room for two more.</p><div class="chips"><span class="chip">Queen bed</span><span class="chip">Sleeps 4 total</span></div></div>
+          </article>
+          <article class="card reveal">
+            <div class="card-media"><img src="assets/img/bathroom-sm.webp" alt="Bathroom with a walk-in shower, wood walls and a dark vanity" loading="lazy"></div>
+            <div class="card-body"><h3>Roomy bathroom</h3><p>A spacious bathroom with a walk-in shower, finished in warm wood.</p><div class="chips"><span class="chip">Shower</span></div></div>
+          </article>
+          <article class="card reveal">
+            <div class="card-media"><img src="assets/img/sitting-area-sm.webp" alt="Sitting area with two leather club chairs and a patterned rug" loading="lazy"></div>
+            <div class="card-body"><h3>Sitting area</h3><p>Two extra leather club chairs by the window, made for coffee and river-watching.</p><div class="chips"><span class="chip">Club chairs</span></div></div>
+          </article>
+          <article class="card reveal">
+            <div class="card-media"><img src="assets/img/deck-view-sm.webp" alt="Covered deck with chairs, looking up the Ohio River" loading="lazy"></div>
+            <div class="card-body"><h3>River-view deck</h3><p>Large windows run the width of the cabin, so the river is in view from many angles inside and out.</p><div class="chips"><span class="chip">Covered deck</span><span class="chip">Big windows</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    .landing .title {
-      font-size: 72px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
-      margin-bottom: 20px;
-    }
+    <section class="section">
+      <div class="container split reverse">
+        <div class="split-media reveal"><img src="assets/img/patio-lights-sm.webp" alt="The lower patio and hot tub area lit by path lights at night" loading="lazy" style="object-position:center 70%"></div>
+        <div class="reveal">
+          <span class="eyebrow">Outdoors</span>
+          <h2>A hot tub, a fire pit and a deck over the water</h2>
+          <p class="lead">The upper deck looks straight out over the Ohio. Down on the lower patio there's a hot tub with a river view and a fire pit for cool evenings.</p>
+          <ul class="check-list" style="margin-top:1.5rem">
+            <li>River-view covered deck</li><li>Hot tub on the lower patio</li>
+            <li>Fire pit area</li><li>Parking in front of the cabin</li>
+            <li>Sunsets over Kentucky</li><li>Quiet country lane</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    .landing .subtitle {
-      font-size: 18px;
-    }
-
-    .content {
-      min-height: 500vh;
-      background: linear-gradient(
-        to bottom,
-        transparent 10%,
-        #1a1d1e 30%,
-        #1a1d1e
-      );
-      z-index: 5;
-      position: relative;
-    }
-
-    .image-gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 1400px;
-      padding-bottom: 100px;
-    }
-
-    .showcase-title {
-      color: #ffffff;
-      text-align: center;
-      margin-bottom: 80px;
-      font-size: 48px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .image-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 60px 0;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease-out;
-    }
-
-    .image-container.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .image {
-      max-width: 50%;
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
-      margin: 0 4%;
-      z-index: 6;
-      transition: all 0.4s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .image:hover {
-      transform: scale(1.02);
-      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.7);
-    }
-
-    .caption {
-      color: rgba(255, 255, 255, 0.9);
-      text-align: center;
-      margin: 25px 4%;
-      max-width: 50%;
-      width: 100%;
-      font-size: 16px;
-      line-height: 1.7;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .right {
-      align-items: flex-end;
-    }
-
-    .left {
-      align-items: flex-start;
-    }
-
-    @media (max-width: 767.98px) {
-      .landing .title {
-        font-size: 48px;
-      }
-
-      .description {
-        font-size: 18px;
-        max-width: 90%;
-        margin-top: 120px;
-      }
-
-      .image,
-      .caption {
-        max-width: 90%;
-        margin: 0 5%;
-      }
-
-      .showcase-title {
-        font-size: 36px;
-        margin-bottom: 50px;
-      }
-
-      h1 {
-        margin-top: 50px;
-      }
-
-      .right,
-      .left {
-        align-items: center;
-      }
-    }
-  </style>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item active" id="home">
-            <div class="nav-container">
-              <a class="nav-link" href="index.html">Home</a>
-              <div class="underline"></div>
-            </div>
-          </li>
-          <li class="nav-item" id="about">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item" id="calendar">
-            <a class="nav-link" href="calendar.html">Calendar</a>
-          </li>
-          <li class="nav-item" id="rates">
-            <a class="nav-link" href="rates.html">Rates</a>
-          </li>
-          <li class="nav-item" id="activities">
-            <a class="nav-link" href="activities.html">Activities</a>
-          </li>
-          <li class="nav-item" id="moods">
-            <a class="nav-link" href="moods.html">Moods</a>
-          </li>
+    <section class="section-tight section-alt">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">The kitchen</span><h2>Cook like you're at home</h2></div></div>
+        <ul class="check-list reveal" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+          <li>Large island seating 4</li><li>Full-size refrigerator</li><li>Dishwasher</li><li>Stove</li>
+          <li>Small microwave</li><li>Keurig coffeemaker</li><li>Toaster</li><li>Silverware, dishes &amp; glassware</li><li>Pots and pans</li>
         </ul>
       </div>
-    </nav>
+    </section>
 
-    <div class="landing">
-      <h1 class="title">Riversong</h1>
-      <p class="description">
-        Welcome to the Riversong Timber Frame Cabin nestled in the quaint town
-        of Leavenworth, IN. <br />This beautiful retreat overlooks the Ohio
-        River from the Indiana banks facing the Kentucky landscape.
-      </p>
-    </div>
-
-    <div class="content">
-      <div class="image-gallery">
-        <h2 class="showcase-title">Showcase</h2>
-        <div class="image-container right">
-          <img src="Images/Index/river_view1.jpg" alt="Image 1" class="image" />
-          <p class="caption">View of river.</p>
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Showcase</span><h2>Photo gallery</h2></div>
+          <p class="muted" style="margin:0">Tap any photo to enlarge. Use the arrow keys to browse.</p>
         </div>
-        <div class="image-container left">
-          <img src="Images/Index/image2.jpg" alt="Image 2" class="image" />
-          <p class="caption">
-            The sitting area provides two additional leather club chairs.
-          </p>
-        </div>
-        <div class="image-container right">
-          <img src="Images/Index/image7.jpg" alt="Image 7" class="image" />
-          <p class="caption">View of main cabin area.</p>
-        </div>
-        <div class="image-container left">
-          <img src="Images/Index/image3.jpg" alt="Image 3" class="image" />
-          <p class="caption">
-            Kitchen with amenities: <br />
-            Large Island, seating for 4 guests, Full size Refrigerator,
-            Dishwasher, <br />
-            Stove, Small Microwave, Keurig Coffeemaker, Toaster. <br />
-            Kitchen Cooking Utensils to include silverware, dishware, glassware,
-            and various pots and pans.
-          </p>
-        </div>
-        <div class="image-container right">
-          <img src="Images/Index/image4.jpg" alt="Image 4" class="image" />
-          <p class="caption">
-            Queen size bed in bedroom, and an additional sleeping option for
-            extra guests on the queen size sleeper sofa.
-          </p>
-        </div>
-        <div class="image-container left">
-          <img src="Images/Index/image5.jpg" alt="Image 5" class="image" />
-          <p class="caption">Roomy Bathroom with Shower.</p>
-        </div>
-        <div class="image-container right">
-          <img src="Images/Index/Deck_View.jpg" alt="Image 5" class="image" />
-          <p class="caption">
-            Riverview outside deck with large windows spanning the width of the
-            cabin with beautiful views from many different angles within the
-            cabin. Also includes a hot tub on the lower patio and firepit area.
-          </p>
-        </div>
-        <div class="image-container left">
-          <img src="Images/Index/image6.jpg" alt="Image 6" class="image" />
-          <p class="caption">
-            View of the outside of the Riversong showing the upper deck and
-            lower patio area where hot tub is located.
-          </p>
-        </div>
-        <div class="image-container right">
-          <img src="Images/Index/hottub.jpg" alt="hottub" class="image" />
-          <p class="caption">Riverview hot tub.</p>
-        </div>
-        <div class="image-container left">
-          <img src="Images/Index/solar.jpeg" alt="solar" class="image" />
-          <p class="caption">Night time view of hot tub area.</p>
+        <div class="gallery" data-gallery style="grid-auto-flow:dense">
+          <button type="button" class="wide" data-lightbox="assets/img/river-sunset.webp" data-caption="View of the river." aria-label="View larger: Orange sunset clouds over the Ohio River"><img src="assets/img/river-sunset-sm.webp" alt="Orange sunset clouds over the Ohio River" loading="lazy"></button>
+          <button type="button" class="tall" data-lightbox="assets/img/sitting-area.webp" data-caption="The sitting area provides two additional leather club chairs." aria-label="View larger: Sitting area with two leather club chairs"><img src="assets/img/sitting-area-sm.webp" alt="Sitting area with two leather club chairs" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/great-room.webp" data-caption="View of the main cabin area." aria-label="View larger: The main cabin room with timber beams"><img src="assets/img/great-room-sm.webp" alt="The main cabin room with timber beams" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/kitchen.webp" data-caption="Kitchen with a large island seating 4, full-size refrigerator, dishwasher, stove, small microwave, Keurig coffeemaker and toaster, plus silverware, dishes, glassware and pots and pans." aria-label="View larger: The kitchen"><img src="assets/img/kitchen-sm.webp" alt="The kitchen" loading="lazy"></button>
+          <button type="button" class="wide" data-lightbox="assets/img/bedroom.webp" data-caption="Queen-size bed in the bedroom, plus a queen-size sleeper sofa for extra guests." aria-label="View larger: The queen bedroom"><img src="assets/img/bedroom-sm.webp" alt="The queen bedroom" loading="lazy"></button>
+          <button type="button" class="tall" data-lightbox="assets/img/bathroom.webp" data-caption="Roomy bathroom with shower." aria-label="View larger: The bathroom with shower"><img src="assets/img/bathroom-sm.webp" alt="The bathroom with shower" loading="lazy"></button>
+          <button type="button" class="wide" data-lightbox="assets/img/deck-view.webp" data-caption="River-view deck with large windows spanning the width of the cabin. A hot tub and fire pit are on the lower patio." aria-label="View larger: The river-view deck"><img src="assets/img/deck-view-sm.webp" alt="The river-view deck" loading="lazy"></button>
+          <button type="button" class="tall" data-lightbox="assets/img/patio-lights.webp" data-caption="Night-time view of the hot tub area." aria-label="View larger: The hot tub patio lit up at night"><img src="assets/img/patio-lights-sm.webp" alt="The hot tub patio lit up at night" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/exterior-patio.webp" data-caption="The outside of Riversong, showing the upper deck and the lower patio where the hot tub is." aria-label="View larger: Outside of Riversong with the upper deck and lower patio"><img src="assets/img/exterior-patio-sm.webp" alt="Outside of Riversong with the upper deck and lower patio" loading="lazy"></button>
+          <button type="button" data-lightbox="assets/img/hot-tub.webp" data-caption="River-view hot tub." aria-label="View larger: Hot tub with the river beyond"><img src="assets/img/hot-tub-sm.webp" alt="Hot tub with the river beyond" loading="lazy"></button>
+          <button type="button" class="wide" data-lightbox="assets/img/cabin-front.webp" data-caption="The front of the cabin. Parking is right out front." aria-label="View larger: Front of Riversong Cabin with its entry steps"><img src="assets/img/cabin-front-sm.webp" alt="Front of Riversong Cabin with its entry steps" loading="lazy"></button>
+          <button type="button" class="wide" data-lightbox="assets/img/sunset-violet.webp" data-caption="Sunset from the deck." aria-label="View larger: Purple and gold sunset over the river bend"><img src="assets/img/sunset-violet-sm.webp" alt="Purple and gold sunset over the river bend" loading="lazy"></button>
         </div>
       </div>
+    </section>
+
+    <section class="section section-dark" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Reservations</span>
+          <h2>Ready for a few nights on the river?</h2>
+          <p class="lead">Riversong is booked directly with the owner, Darlene Vasser. Check the <a href="calendar.html" style="color:#fff">calendar</a> for open dates, then call or email to reserve.</p>
+          <div class="btn-row" style="margin-top:1.5rem">
+            <a class="btn btn-primary" href="tel:+15023144007"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Call Darlene (502) 314-4007</a>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <ul class="contact-lines">
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+15023144007">(502) 314-4007</a><small>Call or text Darlene</small></div></li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><div><a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a><small>Email for dates and questions</small></div></li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><a href="about.html#directions">Leavenworth, Indiana</a><small>On the Ohio River, off I-64 exit 92</small></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f3d38"/><g fill="none" stroke="#f6f2ea" stroke-linecap="round" stroke-linejoin="round"><path d="M9 37 L32 10 L55 37" stroke-width="4.2"/><path d="M15 37 H49 M32 11 V37 M32 37 L22.5 25 M32 37 L41.5 25" stroke-width="2.8"/></g><path d="M9 47 q5.75 -4.5 11.5 0 t11.5 0 t11.5 0 t11.5 0" fill="none" stroke="#e39a5c" stroke-width="3.4" stroke-linecap="round"/><path d="M15 55 q4.25 -3.4 8.5 0 t8.5 0 t8.5 0 t8.5 0" fill="none" stroke="#e39a5c" stroke-width="2.6" stroke-linecap="round" opacity=".7"/></svg><span class="brand-text"><span class="brand-name">Riversong</span><span class="brand-sub">On the Ohio River</span></span></a>
+          <p>A timber-frame cabin in Leavenworth, Indiana, looking across the Ohio River to the Kentucky hills.</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="rates.html">Rates</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="activities.html">Activities</a></li><li><a href="moods.html">Moods</a></li></ul></div>
+        <div><h4>Reservations</h4><ul>
+          <li>Darlene Vasser, owner</li>
+          <li><a href="tel:+15023144007">(502) 314-4007</a></li>
+          <li><a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span data-year>2026</span> Riversong Cabin</span><span>No pets · No smoking inside · No parties or events</span></div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+  </footer>
+</body>
 </html>

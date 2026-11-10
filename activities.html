@@ -1,225 +1,112 @@
-<style>
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-  }
-
-  .page-title {
-    text-align: center;
-    font-size: 48px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    margin: 60px 20px 40px;
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 1px;
-    animation: fadeIn 1s ease-out;
-    position: relative;
-    z-index: 10;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .activities-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-family: "Lora", serif;
-    padding: 20px 0 80px;
-    position: relative;
-    z-index: 10;
-  }
-
-  .activity {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(34, 32, 32, 0.95), rgba(42, 40, 40, 0.95));
-    color: #ffffff;
-    border-radius: 16px;
-    padding: 40px;
-    margin: 25px;
-    max-width: 800px;
-    width: 80%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideUp 0.8s ease-out forwards;
-  }
-
-  @keyframes slideUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .activity:nth-child(1) { animation-delay: 0.1s; }
-  .activity:nth-child(2) { animation-delay: 0.2s; }
-  .activity:nth-child(3) { animation-delay: 0.3s; }
-  .activity:nth-child(4) { animation-delay: 0.4s; }
-
-  .activity:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.6);
-  }
-
-  .activity-image {
-    max-width: 40%;
-    height: auto;
-    border-radius: 10px; /* Slightly rounded corners for the images */
-    margin-right: 2%;
-  }
-
-  .activity-info {
-    line-height: 1.5; /* Spacing between lines */
-    z-index: 3;
-  }
-
-  .activity-info h3 {
-    margin: 0 0 15px;
-    font-size: 28px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    color: #ffffff;
-  }
-
-  .activity-info p {
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.7;
-    text-align: center;
-    font-family: "Lora", serif;
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  @media (max-width: 767.98px) {
-    /* Responsive layout for smaller screens */
-    .activity {
-      flex-direction: column; /* Stack on mobile */
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-    .activity-image,
-    .activity-info {
-      max-width: 100%;
-      width: 100%;
-      margin: 10px 0;
-    }
-  }
-</style>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riversong | Activities</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item" id="home">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item" id="about">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item" id="calendar">
-            <a class="nav-link" href="calendar.html">Calendar</a>
-          </li>
-          <li class="nav-item" id="rates">
-            <a class="nav-link" href="rates.html">Rates</a>
-          </li>
-          <li class="nav-item active" id="activities">
-            <div class="nav-container">
-              <a class="nav-link" href="activities.html">Activities</a>
-              <div class="underline"></div>
-            </div>
-            <li class="nav-item" id="moods">
-                <a class="nav-link" href="moods.html">Moods</a>
-              </li>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <h1 class="page-title">Activities in Leavenworth, Indiana</h1>
-    <div class="activities-container">
-      <!-- Activity 1 -->
-      <div class="activity">
-        <div class="activity-info">
-          <h3>Cave Exploring</h3>
-          <p>
-            Discover the hidden wonders of Leavenworth's caves. Guided tours
-            available.
-          </p>
-        </div>
-      </div>
-      <!-- Activity 2 -->
-      <div class="activity">
-        <div class="activity-info">
-          <h3>River Kayaking</h3>
-          <p>
-            Experience the thrill of kayaking on the Ohio River. Rentals and
-            lessons offered.
-          </p>
-        </div>
-      </div>
-      <!-- Activity 3 -->
-      <div class="activity">
-        <div class="activity-info">
-          <h3>Hiking Trails</h3>
-          <p>
-            Explore the scenic trails around Leavenworth, ranging from leisurely
-            walks to challenging hikes.
-          </p>
-        </div>
-      </div>
-      <!-- Activity 4 -->
-      <div class="activity">
-        <div class="activity-info">
-          <h3>Fishing Spots</h3>
-          <p>
-            Find your perfect fishing spot along the Ohio River, with
-            opportunities for anglers of all levels.
-          </p>
-        </div>
-      </div>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activities near Leavenworth, IN | Riversong Cabin</title>
+  <meta name="description" content="Things to do near Riversong Cabin in Leavenworth, Indiana: cave tours, kayaking and canoeing, hiking trails and fishing on the Ohio River.">
+  <link rel="canonical" href="https://cabinriversong.com/activities.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riversong Cabin">
+  <meta property="og:title" content="Activities near Leavenworth, IN | Riversong Cabin">
+  <meta property="og:description" content="Things to do near Riversong Cabin in Leavenworth, Indiana: cave tours, kayaking and canoeing, hiking trails and fishing on the Ohio River.">
+  <meta property="og:url" content="https://cabinriversong.com/activities.html">
+  <meta property="og:image" content="https://cabinriversong.com/assets/img/river-sunset.webp">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1f3d38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1">
+  <script src="js/site.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header over-hero" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Riversong Cabin home"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f3d38"/><g fill="none" stroke="#f6f2ea" stroke-linecap="round" stroke-linejoin="round"><path d="M9 37 L32 10 L55 37" stroke-width="4.2"/><path d="M15 37 H49 M32 11 V37 M32 37 L22.5 25 M32 37 L41.5 25" stroke-width="2.8"/></g><path d="M9 47 q5.75 -4.5 11.5 0 t11.5 0 t11.5 0 t11.5 0" fill="none" stroke="#e39a5c" stroke-width="3.4" stroke-linecap="round"/><path d="M15 55 q4.25 -3.4 8.5 0 t8.5 0 t8.5 0 t8.5 0" fill="none" stroke="#e39a5c" stroke-width="2.6" stroke-linecap="round" opacity=".7"/></svg><span class="brand-text"><span class="brand-name">Riversong</span><span class="brand-sub"><span class="hide-sm">Timber-frame cabin · </span>Leavenworth, IN</span></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav class="nav" id="site-nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="rates.html">Rates</a><a href="calendar.html">Calendar</a><a href="activities.html" aria-current="page">Activities</a><a href="moods.html">Moods</a><a class="btn btn-primary" href="tel:+15023144007">Call Darlene</a></nav>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <img src="assets/img/paddle-boat.webp" alt="A lit-up paddle wheeler on the Ohio River at night" style="object-position:center" fetchpriority="high">
+      <div class="container">
+        <span class="eyebrow">Things to do</span>
+        <h1>Activities in Leavenworth, Indiana</h1>
+        <p>Caves, rivers and forest trails are all close by. Or stay on the deck and watch the river go by.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Explore southern Indiana</span><h2>Get out and about</h2></div></div>
+        <div class="features" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+          <div class="feature reveal"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20M4 20c0-6 3-11 8-11s8 5 8 11"/><path d="M9 20c0-2.5 1.3-4.5 3-4.5s3 2 3 4.5"/></svg><span class="distance" style="display:table">Within 30 minutes</span><h3>Cave exploring</h3><p>This is cave country. Discover the hidden wonders under southern Indiana on a guided tour.</p>
+            <ul class="muted" style="margin:.8rem 0 0;padding-left:1.1rem;font-size:.95rem"><li>Wyandotte Caves</li><li>Marengo Cave</li><li>Squire Boone Caverns</li><li>Indiana Caverns</li></ul></div>
+          <div class="feature reveal"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.4 17 21 12H3l1.6 5M12 12V3l7 9"/></svg><span class="distance" style="display:table">Close by</span><h3>River kayaking &amp; canoeing</h3><p>Paddle the Ohio River, or go canoeing, kayaking and tubing on the nearby Blue River.</p>
+            <ul class="muted" style="margin:.8rem 0 0;padding-left:1.1rem;font-size:.95rem"><li>Kayaking on the Ohio River</li><li>Canoeing and tubing on the Blue River</li><li>Pleasure boating</li></ul></div>
+          <div class="feature reveal"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5M7 17h10l-3-4h2l-4-5h1.5L12 3 8.5 8H10l-4 5h2z"/></svg><span class="distance" style="display:table">Within 20 minutes</span><h3>Hiking trails</h3><p>Scenic trails around Leavenworth range from easy walks to challenging hikes, with bluffs and overlooks.</p>
+            <ul class="muted" style="margin:.8rem 0 0;padding-left:1.1rem;font-size:.95rem"><li>O'Bannon Woods State Park</li><li>Harrison-Crawford State Forest</li><li>Hemlock Cliffs</li></ul></div>
+          <div class="feature reveal"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 12c3.5-5 9-6 14-2.5-5 3.5-10.5 2.5-14-2.5zM6.5 12c3.5 5 9 6 14 2.5"/><path d="M6.5 12 2 8v8z"/><path d="M16 10.5h.01"/></svg><span class="distance" style="display:table">On the Ohio River</span><h3>Fishing</h3><p>Find your spot along the Ohio River, with good fishing for anglers of every level.</p>
+            <ul class="muted" style="margin:.8rem 0 0;padding-left:1.1rem;font-size:.95rem"><li>Ohio River bank fishing</li><li>Boat fishing</li><li>Blue River</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Or stay put</span>
+          <h2>The best seat on the river</h2>
+          <p class="lead">Some of the best moments happen right at the cabin: towboats pushing barges, paddle wheelers lit up at night, and sunsets that set the whole river glowing.</p>
+          <p>For a change of pace, historic Corydon has restaurants and shops about 25 minutes away, and Louisville is roughly 35 miles east.</p>
+          <div class="btn-row"><a class="btn btn-dark" href="moods.html">See the river's moods</a></div>
+        </div>
+        <div class="split-media reveal"><img src="assets/img/sunset-sun-sm.webp" alt="The sun setting over the river bend" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Reservations</span>
+          <h2>Ready for a few nights on the river?</h2>
+          <p class="lead">Riversong is booked directly with the owner, Darlene Vasser. Check the <a href="calendar.html" style="color:#fff">calendar</a> for open dates, then call or email to reserve.</p>
+          <div class="btn-row" style="margin-top:1.5rem">
+            <a class="btn btn-primary" href="tel:+15023144007"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Call Darlene (502) 314-4007</a>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <ul class="contact-lines">
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+15023144007">(502) 314-4007</a><small>Call or text Darlene</small></div></li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><div><a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a><small>Email for dates and questions</small></div></li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><a href="about.html#directions">Leavenworth, Indiana</a><small>On the Ohio River, off I-64 exit 92</small></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f3d38"/><g fill="none" stroke="#f6f2ea" stroke-linecap="round" stroke-linejoin="round"><path d="M9 37 L32 10 L55 37" stroke-width="4.2"/><path d="M15 37 H49 M32 11 V37 M32 37 L22.5 25 M32 37 L41.5 25" stroke-width="2.8"/></g><path d="M9 47 q5.75 -4.5 11.5 0 t11.5 0 t11.5 0 t11.5 0" fill="none" stroke="#e39a5c" stroke-width="3.4" stroke-linecap="round"/><path d="M15 55 q4.25 -3.4 8.5 0 t8.5 0 t8.5 0 t8.5 0" fill="none" stroke="#e39a5c" stroke-width="2.6" stroke-linecap="round" opacity=".7"/></svg><span class="brand-text"><span class="brand-name">Riversong</span><span class="brand-sub">On the Ohio River</span></span></a>
+          <p>A timber-frame cabin in Leavenworth, Indiana, looking across the Ohio River to the Kentucky hills.</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="rates.html">Rates</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="activities.html">Activities</a></li><li><a href="moods.html">Moods</a></li></ul></div>
+        <div><h4>Reservations</h4><ul>
+          <li>Darlene Vasser, owner</li>
+          <li><a href="tel:+15023144007">(502) 314-4007</a></li>
+          <li><a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span data-year>2026</span> Riversong Cabin</span><span>No pets · No smoking inside · No parties or events</span></div>
+    </div>
+  </footer>
+</body>
 </html>
