@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1">
-  <script src="js/site.js?v=1" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <script src="js/site.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,21 +37,46 @@
       <img src="assets/img/sunset-violet.webp" alt="Purple sunset over a bend in the Ohio River" style="object-position:center" fetchpriority="high">
       <div class="container">
         <span class="eyebrow">Availability</span>
-        <h1>Calendar</h1>
-        <p>Booked dates are marked on the calendar. Find an open stretch, then call or email Darlene to reserve.</p>
+        <h1>Availability</h1>
+        <p>Booked nights are marked on the calendar. Find an open stretch, then call or email Darlene to reserve.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="cal-frame reveal">
-          <iframe title="Riversong availability calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23F6BF26&amp;ctz=America%2FNew_York&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0&amp;showTitle=0&amp;src=ZmE5MmVmNTg1MzA4ZDM4NTk4ZWM5MjQ3ZGI2YzM2Mjg2YjJiOTg4ZGVjNTRhYjk4ODRjMDI0MmI4MjZlOWQ5MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4" loading="lazy"></iframe>
+      <div class="container" id="calendar">
+        <div class="cal-live">
+          <div class="cal-toolbar">
+            <div class="cal-legend" aria-hidden="true">
+              <span><span class="swatch open"></span>Open</span>
+              <span><span class="swatch booked"></span>Booked</span>
+              <span><span class="swatch today"></span>Today</span>
+            </div>
+            <div class="cal-nav">
+              <button type="button" data-cal-prev aria-label="Previous month">&lsaquo;</button>
+              <strong data-cal-label aria-live="polite"></strong>
+              <button type="button" data-cal-next aria-label="Next month">&rsaquo;</button>
+            </div>
+          </div>
+          <div class="cal-months"></div>
+          <p class="cal-note"><span data-cal-status>Please call to confirm your dates.</span> A booked day means the cabin is taken that night. You can check in on the day another guest checks out.</p>
         </div>
-        <div class="callout reveal" style="margin-top:1.5rem">
-          <p><strong>To reserve,</strong> call Darlene Vasser, Riversong owner, at <a href="tel:+15023144007">(502) 314-4007</a> or email <a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a>. Stays have a 2-night minimum. See <a href="rates.html">rates &amp; policies</a>.</p>
+        <div class="cal-fallback"></div>
+        <template id="google-cal">
+          <div class="cal-frame">
+            <iframe title="Riversong availability calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23F6BF26&amp;ctz=America%2FNew_York&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0&amp;showTitle=0&amp;src=ZmE5MmVmNTg1MzA4ZDM4NTk4ZWM5MjQ3ZGI2YzM2Mjg2YjJiOTg4ZGVjNTRhYjk4ODRjMDI0MmI4MjZlOWQ5MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4" loading="lazy"></iframe>
+          </div>
+        </template>
+        <noscript>
+          <div class="cal-frame">
+            <iframe title="Riversong availability calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23F6BF26&amp;ctz=America%2FNew_York&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0&amp;showTitle=0&amp;src=ZmE5MmVmNTg1MzA4ZDM4NTk4ZWM5MjQ3ZGI2YzM2Mjg2YjJiOTg4ZGVjNTRhYjk4ODRjMDI0MmI4MjZlOWQ5MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4"></iframe>
+          </div>
+        </noscript>
+        <div class="callout reveal" style="margin-top:2rem">
+          <p><strong>Found your dates?</strong> To reserve, call Darlene Vasser, Riversong owner, at <a href="tel:+15023144007">(502) 314-4007</a> or email <a href="mailto:dvasser46@gmail.com">dvasser46@gmail.com</a>. Stays have a 2-night minimum. See <a href="rates.html">rates &amp; policies</a>.</p>
         </div>
       </div>
     </section>
+    <script src="js/calendar.js?v=2" defer></script>
 
     <section class="section section-dark" id="contact">
       <div class="container contact-grid">

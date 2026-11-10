@@ -1,0 +1,35 @@
+# Copies Riversong's booked dates from Google Calendar into data/booked.json.
+# GitHub only runs scheduled workflows from the default branch (main),
+# so this starts working once the redesign is merged.
+name: Update booked dates
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # every hour
+  workflow_dispatch:       # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-calendar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch booked dates
+        run: python3 scripts/update_calendar.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/booked.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/booked.json
+          git commit -m "Update booked dates from Google Calendar"
+          git push
