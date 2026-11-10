@@ -1,5 +1,7 @@
+// The page scrolls inside <body> (style.css sets html/body to height: 100%; overflow: auto),
+// so listen in the capture phase to catch the body's scroll events and read its scrollTop.
 document.addEventListener('scroll', function() {
-    let scrollPosition = window.scrollY;
+    let scrollPosition = window.scrollY || document.body.scrollTop;
     let windowHeight = window.innerHeight;
     let bodyBefore = document.querySelector('body').style;
 
@@ -24,6 +26,6 @@ document.addEventListener('scroll', function() {
             container.classList.add('visible');
         }
     });
-});
+}, true);
 
 
