@@ -47,7 +47,7 @@ Then open http://localhost:8080.
 
 ## Cache busting
 
-Pages load `css/styles.css?v=3`, `js/site.js?v=3` and `js/calendar.js?v=3`. After you change the CSS or JS, bump that number in every `.html` file so visitors' browsers fetch the new copy.
+Pages load `css/styles.css?v=4`, `js/site.js?v=4` and `js/calendar.js?v=4`. After you change the CSS or JS, bump that number in every `.html` file so visitors' browsers fetch the new copy.
 
 ## Make it live
 

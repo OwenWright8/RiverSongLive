@@ -126,7 +126,7 @@ p { margin: 0 0 1em; }
 .hero-content { position: relative; z-index: 1; padding: 0 0 clamp(3rem, 9vh, 6rem); }
 .hero-content .eyebrow { color: #f6cfa8; }
 .hero h1 { max-width: 16ch; text-shadow: 0 2px 30px rgba(0,0,0,.25); }
-.hero p { font-size: 1.2rem; max-width: 54ch; opacity: .95; }
+.hero p { font-size: 1.4rem; line-height: 1.55; max-width: 50ch; opacity: .96; }
 .hero .btn-row { margin-top: 1.8rem; }
 
 .page-hero {
@@ -154,7 +154,8 @@ p { margin: 0 0 1em; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split.reverse .split-media { order: -1; } }
 
 /* Quick facts */
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin: 1.75rem 0; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin: 1.75rem 0; }
+@media (max-width: 1100px) { .facts { grid-template-columns: 1fr 1fr; } }
 .fact { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; }
 .fact strong { display: block; font-family: var(--serif); font-size: 1.55rem; font-weight: 500; line-height: 1.1; }
 .fact span { font-size: .85rem; color: var(--muted); }
@@ -197,6 +198,7 @@ p { margin: 0 0 1em; }
 .gallery button:hover img, .gallery button:focus-visible img { transform: scale(1.05); }
 .gallery .wide { grid-column: span 2; }
 .gallery .tall { grid-row: span 2; }
+.gallery .big { grid-column: span 2; grid-row: span 2; }
 .gallery.moods { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 340px; }
 @media (max-width: 860px) {
   .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
@@ -391,9 +393,8 @@ p { margin: 0 0 1em; }
   /* Hero */
   .hero-content { padding-bottom: 2.25rem; }
   .hero h1 { font-size: 2.35rem; }
-  .hero p { font-size: 1.02rem; line-height: 1.6; }
-  .hero .btn-row { margin-top: 1.4rem; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
-  .hero .btn-row .btn { padding: .8rem .6rem; font-size: .9rem; }
+  .hero p { font-size: 1.16rem; line-height: 1.55; }
+  .hero .btn-row { margin-top: 1.4rem; }
   .page-hero { min-height: 42vh; }
   .page-hero .container { padding: 6.5rem 0 2rem; }
   .page-hero h1 { font-size: 2.2rem; }
@@ -459,6 +460,5 @@ p { margin: 0 0 1em; }
   .footer-bottom { margin-top: 2rem; flex-direction: column; gap: .4rem; }
 }
 @media (max-width: 360px) {
-  .hero .btn-row { grid-template-columns: 1fr; }
   .policies { grid-template-columns: 1fr; }
 }
